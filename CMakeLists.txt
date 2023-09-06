@@ -8,6 +8,11 @@ cmake_minimum_required(VERSION 3.18 FATAL_ERROR)
 
 project(TrustWalletCore)
 
+set(BOOST_ROOT "/opt/homebrew/Cellar/boost/1.82.0_1")
+# set(Boost_INCLUDE_DIR /opt/homebrew/Cellar/boost/1.82.0_1)
+# SET(CMAKE_INCLUDE_PATH ${CMAKE_INCLUDE_PATH} "/opt/homebrew/Cellar/boost/1.82.0_1")
+# SET(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} "/opt/homebrew/Cellar/boost/1.82.0_1/lib")
+
 if (NOT ("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang"))
     message(FATAL_ERROR "You should use clang compiler")
 endif ()
