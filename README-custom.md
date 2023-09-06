@@ -16,3 +16,34 @@ your project file structs will look like this
 <img width="348" alt="截屏2021-09-15 下午4 10 52" src="https://user-images.githubusercontent.com/54241621/133395756-8541e0eb-a5f8-44f5-8c3c-0ed8379377cd.png">
 
 then you are ready to run.
+
+
+
+## ====================
+编译说明：
+https://developer.trustwallet.com/developer/wallet-core/developing-the-library/building
+
+命令：
+## MacOS
+./tools/install-sys-dependencies-mac
+
+./tools/install-dependencies
+./tools/install-rust-dependencies
+
+arch -arm64 brew install emscripten
+
+
+## 看看build是否可以通过
+./bootstrap.sh 
+
+## 预生成文件
+sh tools/generate-files
+
+## android
+sh tools/android-build
+
+## ios
+sh tools/ios-build
+
+## ios 版本生成压缩文件进行依赖，避免工程太大
+podspec 先发布 1.1.0 -> pod repo update  -> pod update TCWalletCoreCommon
