@@ -30,7 +30,7 @@ cp -R ${src_dir}/swift/Sources release
 rm release/Sources/Dummy.cpp
 cp ${src_dir}/License release
 
-filename="TrustWalletCore-${version}.tar.xz"
+filename="wallet_core_common-${version}.tar.xz"
 pushd release
 tar -cJvf ../${filename} .
 popd
@@ -49,9 +49,9 @@ Pod::Spec.new do |s|
   s.name         = '${podspec_name}'
   s.version      = '${version}'
   s.summary      = 'Trust Wallet core data structures and algorithms.'
-  s.homepage     = 'https://github.com/trustwallet/wallet-core'
+  s.homepage     = 'https://github.com/Bitverse-Pte/wallet-core'
   s.license      = 'MIT'
-  s.authors      = { 'Alejandro Isaza' => 'al@isaza.ca' }
+  s.authors      = { 'bitverse developer' => 'developer@bitverse.zone' }
   s.module_name  = 'WalletCore'
   s.ios.deployment_target = '12.0'
   s.osx.deployment_target = '10.14'

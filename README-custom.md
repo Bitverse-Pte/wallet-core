@@ -31,6 +31,7 @@ https://developer.trustwallet.com/developer/wallet-core/developing-the-library/b
 ./tools/install-rust-dependencies
 
 arch -arm64 brew install emscripten
+arch -arm64 brew install jq
 
 
 ## 看看build是否可以通过
@@ -46,4 +47,11 @@ sh tools/android-build
 sh tools/ios-build
 
 ## ios 版本生成压缩文件进行依赖，避免工程太大
-podspec 先发布 1.1.0 -> pod repo update  -> pod update TCWalletCoreCommon
+打包 -> podspec 先发布新版本 -> pod repo update  -> pod update TCWalletCoreCommon
+打包：执行命令：
+sh tools/ios-release
+
+podspec发布:
+http://bitvers-manager-tools.bitverse.green/bitbase/app/ios/specs/-/blob/master/TCWalletCoreCommon/1.0.0/TCWalletCoreCommon.podspec
+
+
