@@ -14,7 +14,7 @@ wc_release_url() {
    # id=$(curl -u ${GITHUB_USER}:${GITHUB_TOKEN} "https://api.github.com/repos/trustwallet/wallet-core/releases/tags/${tag}" | jq ".id")
     if [[ $id == "null" ]]; then
         echo "Failed to get release id for tag ${tag}"
-  #      exit 22
+        exit 22
     fi
     release_url="https://uploads.github.com/repos/Bitverse-Pte/wallet-core/releases/${id}"
     echo ${release_url}

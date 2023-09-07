@@ -19,6 +19,7 @@ echo "release version ${version}"
 release_url=$(wc_release_url ${version})
 echo "release_url url is $release_url"
 
+
 pushd ${built_dir}
 # archive headers, swift code and xcframework
 
@@ -42,7 +43,7 @@ download_url=$(tr -d '"' <<< $download_url)
 echo "trimmed download_url is ${download_url}"
 
 # create podspec
-podspec_name=TrustWalletCore
+podspec_name=TCWalletCoreCommon
 podspec=${podspec_name}.podspec
 cat > $podspec <<EOF 
 Pod::Spec.new do |s|
