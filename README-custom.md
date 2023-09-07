@@ -27,21 +27,21 @@ https://developer.trustwallet.com/developer/wallet-core/developing-the-library/b
 ## MacOS
 ./tools/install-sys-dependencies-mac
 
-./tools/install-dependencies
-./tools/install-rust-dependencies
-
 arch -arm64 brew install emscripten
 arch -arm64 brew install jq
 
 
-## 看看build是否可以通过
+## 执行命令
 ./bootstrap.sh 
 
 ## 预生成文件
-sh tools/generate-files
+sh tools/generate-files ios
+sh tools/generate-files android
 
 ## android
 sh tools/android-build
+
+
 
 ## ios
 sh tools/ios-build
