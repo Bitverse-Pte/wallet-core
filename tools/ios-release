@@ -51,7 +51,7 @@ Pod::Spec.new do |s|
   s.version      = '${version}'
   s.summary      = 'Trust Wallet core data structures and algorithms.'
   s.homepage     = 'https://github.com/Bitverse-Pte/wallet-core'
-  s.license      = 'MIT'
+  s.license      = { :type => "MIT", :text => "" }
   s.authors      = { 'bitverse developer' => 'developer@bitverse.zone' }
   s.module_name  = 'WalletCore'
   s.ios.deployment_target = '12.0'

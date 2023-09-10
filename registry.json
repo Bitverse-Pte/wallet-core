@@ -4428,5 +4428,125 @@
       "rpc": "https://neon-proxy-mainnet.solana.p2p.org/",
       "documentation": "https://docs.neonfoundation.io/docs/quick_start"
     }
+  },
+  {
+    "id": "mantle",
+    "name": "Mantle",
+    "coinId": 10005000,
+    "symbol": "MNT",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "5000",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://explorer.mantle.xyz",
+      "txPath": "/tx",
+      "accountPath": "/address/",
+      "sampleTx": "0xf97eebc08c4ccd940320fa1813c6de615bbdee111254ea799302df81722fd154",
+      "sampleAccount": "0xCc23091DE47a988DCB1ac8b0a80B49A14fe0A4ab"
+    },
+    "info": {
+      "url": "https://www.mantle.xyz/",
+      "source": "https://github.com/mantlenetworkio",
+      "rpc": "https://rpc.mantle.xyz",
+      "documentation": "https://docs.mantle.xyz/"
+    }
+  },
+  {
+    "id": "mantletestnet",
+    "name": "Mantle Testnet",
+    "coinId": 10005001,
+    "symbol": "MNT",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "5001",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://explorer.testnet.mantle.xyz",
+      "txPath": "/tx",
+      "accountPath": "/address/",
+      "sampleTx": "0xf97eebc08c4ccd940320fa1813c6de615bbdee111254ea799302df81722fd154",
+      "sampleAccount": "0xCc23091DE47a988DCB1ac8b0a80B49A14fe0A4ab"
+    },
+    "info": {
+      "url": "https://www.mantle.xyz/",
+      "source": "https://github.com/mantlenetworkio",
+      "rpc": "https://rpc.testnet.mantle.xyz",
+      "documentation": "https://docs.mantle.xyz/"
+    }
+  },
+  {
+    "id": "goerli",
+    "name": "Goerli",
+    "coinId": 10000005,
+    "symbol": "ETH",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "5",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://goerli.etherscan.io",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x9edaf0f7d9c6629c31bbf0471fc07d696c73b566b93783f7e25d8d5d2b62fa4f",
+      "sampleAccount": "0x5bb497e8d9fe26e92dd1be01e32076c8e024d167"
+    },
+    "info": {
+      "url": "https://ethereum.org",
+      "source": "https://github.com/ethereum/go-ethereum",
+      "rpc": "https://rpc.ankr.com/eth_goerli",
+      "documentation": "https://eth.wiki/json-rpc/API"
+    }
+  },
+  {
+    "id": "bitgert",
+    "name": "Bitgert",
+    "coinId": 10032520,
+    "symbol": "BRISE",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "32520",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://brisescan.com",
+      "txPath": "/tx",
+      "accountPath": "/address/",
+      "sampleTx": "0x0247f616cb1d371fa45384da06c0fe70442676fad75773a3f808d03cc761417a",
+      "sampleAccount": "0x5f30eD8C6623BAFF9B4f73DDC8Cd524E7E99Ce85"
+    },
+    "info": {
+      "url": "https://bitgert.com",
+      "source": "https://github.com/bitgert",
+      "rpc": "https://dedicated.brisescan.com",
+      "documentation": "https://bitgert.zendesk.com/hc/en-us"
+    }
   }
 ]

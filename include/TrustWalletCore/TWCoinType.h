@@ -176,6 +176,9 @@ enum TWCoinType {
     TWCoinTypeArbitrumNova = 10042170,
     TWCoinTypeLinea = 59144,
     TWCoinTypeGreenfield = 5600,
+    TWCoinTypeMantle = 10005000,
+    TWCoinTypeMantleTestnet = 10005001,
+    TWCoinTypeGoerli = 10000005,
 };
 
 /// Returns the blockchain for a coin type.

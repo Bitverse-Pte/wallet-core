@@ -5,7 +5,7 @@ This list is generated from [./registry.json](../registry.json)
 | Index   | Name             | Symbol | Logo                                                                                                                        | URL                           |
 | ------- | ---------------- | ------ | --------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
 | 0       | Bitcoin          | BTC    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/bitcoin/info/logo.png" width="32" />      | <https://bitcoin.org>         |
-| 1       | Bitcoin Testnet  | BTCTestnet | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/bitcointestnet/info/logo.png" width="32" /> | <https://bitcoin.org>         |
+| 1       | Bitcoin Testnet  | BTC    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/bitcointestnet/info/logo.png" width="32" /> | <https://bitcoin.org>         |
 | 2       | Litecoin         | LTC    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/litecoin/info/logo.png" width="32" />     | <https://litecoin.org>        |
 | 3       | Dogecoin         | DOGE   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/doge/info/logo.png" width="32" />         | <https://dogecoin.com>        |
 | 5       | Dash             | DASH   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/dash/info/logo.png" width="32" />         | <https://dash.org>            |
@@ -99,6 +99,7 @@ This list is generated from [./registry.json](../registry.json)
 | 534353  | Scroll           | ETH    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/scroll/info/logo.png" width="32" />       | <https://scroll.io>           |
 | 5718350 | Wanchain         | WAN    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/wanchain/info/logo.png" width="32" />     | <https://wanchain.org>        |
 | 5741564 | Waves            | WAVES  | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/waves/info/logo.png" width="32" />        | <https://wavesplatform.com>   |
+| 10000005 | Goerli           | ETH    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/goerli/info/logo.png" width="32" />       | <https://ethereum.org>        |
 | 10000025 | Cronos Chain     | CRO    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/cronos/info/logo.png" width="32" />       | <https://cronos.org>          |
 | 10000060 | Native Injective | INJ    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/nativeinjective/info/logo.png" width="32" /> | <https://injective.com>       |
 | 10000070 | Optimism Ethereum | ETH    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/optimism/info/logo.png" width="32" />     | <https://optimism.io/>        |
@@ -120,6 +121,8 @@ This list is generated from [./registry.json](../registry.json)
 | 10002020 | Ronin            | RON    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ronin/info/logo.png" width="32" />        | <https://whitepaper.axieinfinity.com/technology/ronin-ethereum-sidechain> |
 | 10002222 | KavaEvm          | KAVA   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/kavaevm/info/logo.png" width="32" />      | <https://www.kava.io/>        |
 | 10004689 | IoTeX EVM        | IOTX   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/iotexevm/info/logo.png" width="32" />     | <https://iotex.io/>           |
+| 10005000 | Mantle           | MNT    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/mantle/info/logo.png" width="32" />       | <https://www.mantle.xyz/>     |
+| 10005001 | Mantle Testnet   | MNT    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/mantletestnet/info/logo.png" width="32" /> | <https://www.mantle.xyz/>     |
 | 10007700 | NativeCanto      | CANTO  | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/nativecanto/info/logo.png" width="32" />  | <https://canto.io/>           |
 | 10008217 | Klaytn           | KLAY   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/klaytn/info/logo.png" width="32" />       | <https://klaytn.foundation>   |
 | 10009000 | Avalanche C-Chain | AVAX   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/avalanchec/info/logo.png" width="32" />   | <https://www.avalabs.org/>    |

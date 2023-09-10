@@ -4,9 +4,9 @@ Pod::Spec.new do |s|
   s.name         = 'WalletCore'
   s.version      = version
   s.summary      = 'Trust Wallet core data structures and algorithms.'
-  s.homepage     = 'https://github.com/trustwallet/wallet-core'
-  s.license      = 'MIT'
-  s.authors      = { 'Alejandro Isaza' => 'al@isaza.ca' }
+  s.homepage     = 'https://github.com/Bitverse-Pte/wallet-core'
+  s.license      = { :type => "MIT", :text => "" }
+  s.authors      = { 'bitverse developer' => 'developer@bitverse.zone' }
   s.module_name  = 'WalletCore'
   
   s.ios.deployment_target = '12.0'
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.libraries = 'c++'
 
   s.source = {
-    git: 'git@github.com:trustwallet/wallet-core.git'
+    git: 'git@github.com:Bitverse-Pte/wallet-core.git'
   }
 
   s.default_subspec = 'Core'

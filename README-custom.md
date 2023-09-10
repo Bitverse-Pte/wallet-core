@@ -29,25 +29,33 @@ https://developer.trustwallet.com/developer/wallet-core/developing-the-library/b
 
 arch -arm64 brew install emscripten
 arch -arm64 brew install jq
+gem install fastlane
 
+
+修改CMakeLists.txt: 
+set(BOOST_ROOT "/opt/homebrew/Cellar/boost/1.82.0_1")
 
 ## 执行命令
 ./bootstrap.sh 
+./tools/generate-files
 
-## 预生成文件
-sh tools/generate-files ios
-sh tools/generate-files android
 
 ## android
+#### sh tools/generate-files android
 sh tools/android-build
 
 
-
 ## ios
-sh tools/ios-build
+#### (arch -arm64) sh tools/generate-files ios
+#### 生成 build/ios-frameworks/wallet_core_common-1.1.0.tar.xz
+sh tools/ios-build 
+
+#### 生成 swift/build/SwiftProtobuf.xcframework 和 WalletCore.xcframework
+sh tools/ios-xcframework
+
 
 ## ios 版本生成压缩文件进行依赖，避免工程太大
-打包 -> podspec 先发布新版本 -> pod repo update  -> pod update TCWalletCoreCommon
+打包 -> podspec 先发布新版本 -> (arch -arm64) pod repo update  ->  (arch -arm64) pod update TCWalletCoreCommon --repo-update
 打包：执行命令：
 sh tools/ios-release
 
