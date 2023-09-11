@@ -179,6 +179,7 @@ enum TWCoinType {
     TWCoinTypeMantle = 10005000,
     TWCoinTypeMantleTestnet = 10005001,
     TWCoinTypeGoerli = 10000005,
+    TWCoinTypeBitgert = 10032520,
 };
 
 /// Returns the blockchain for a coin type.

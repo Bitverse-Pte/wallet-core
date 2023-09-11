@@ -23,6 +23,9 @@ then you are ready to run.
 编译说明：
 https://developer.trustwallet.com/developer/wallet-core/developing-the-library/building
 
+增加新链： https://developer.trustwallet.com/developer/wallet-core/newblockchain/newevmchain#steps
+
+
 命令：
 ## MacOS
 ./tools/install-sys-dependencies-mac
