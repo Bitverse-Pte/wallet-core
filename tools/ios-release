@@ -31,7 +31,7 @@ cp -R ${src_dir}/swift/Sources release
 rm release/Sources/Dummy.cpp
 cp ${src_dir}/License release
 
-filename="wallet_core_common-${version}.tar.xz"
+filename="wallet_core_common-${version}.zip"
 pushd release
 tar -cJvf ../${filename} .
 popd
