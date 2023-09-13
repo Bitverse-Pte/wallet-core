@@ -2,7 +2,7 @@
   {
     "id": "bitcoin",
     "name": "Bitcoin",
-    "coinId": 0,
+    "coinId": 1,
     "symbol": "BTC",
     "decimals": 8,
     "blockchain": "Bitcoin",
@@ -50,7 +50,7 @@
   {
     "id": "bitcointestnet",
     "name": "Bitcoin Testnet",
-    "coinId": 1,
+    "coinId": 20000001,
     "symbol": "BTC",
     "decimals": 8,
     "blockchain": "Bitcoin",
