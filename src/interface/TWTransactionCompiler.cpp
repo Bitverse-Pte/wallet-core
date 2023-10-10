@@ -5,7 +5,7 @@
 // file LICENSE at the root of the source code distribution tree.
 
 #include <TrustWalletCore/TWTransactionCompiler.h>
-
+#include <android/log.h>
 #include "TransactionCompiler.h"
 #include "Data.h"
 #include "uint256.h"
@@ -66,7 +66,10 @@ TWData *_Nonnull TWTransactionCompilerCompileWithSignatures(enum TWCoinType coin
         const auto publicKeysVec = createFromTWDataVector(publicKeys);
 
         result  = TransactionCompiler::compileWithSignatures(coinType, inputData, signaturesVec, publicKeysVec);
-    } catch (...) {} // return empty
+    } catch (std::exception& ex) {
+        __android_log_write(ANDROID_LOG_INFO, "TWTransactionCompilerCompileWithSignatures.exception",
+                            ex.what());
+    } // return empty
     return TWDataCreateWithBytes(result.data(), result.size());
 }
 
