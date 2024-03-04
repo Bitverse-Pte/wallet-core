@@ -17,25 +17,29 @@ arch -arm64 brew install emscripten
 arch -arm64 brew install jq
 gem install fastlane
 
-
 修改CMakeLists.txt: 
 set(BOOST_ROOT "/opt/homebrew/Cellar/boost/1.82.0_1")
 
 ## 执行命令
+```
 ./bootstrap.sh 
 ./tools/generate-files
-
+```
 
 ## android
-#### sh tools/generate-files android
+```
+sh tools/generate-files android
 sh tools/android-build
 sh tools/android-release
+```
 
 
 ## ios 编译动态库
+```
 sh tools/generate-files ios
 sh tools/ios-xcframework
 sh tools/ios-xcframework-release
+```
 
 ## ios动态库打包
 创建 Frameworks目录，将swift/build/下的 WalletCore.xcframework和SwiftProtobuf.xcframework两个目录拷贝进去，然后对Frameworks目录压缩wallet_core_common-{xxx}.zip

@@ -4490,6 +4490,66 @@
     }
   },
   {
+    "id": "merlin",
+    "name": "Merlin",
+    "coinId": 10004200,
+    "symbol": "BTC",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "4200",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://scan.merlinchain.io",
+      "txPath": "/tx",
+      "accountPath": "/address/",
+      "sampleTx": "0xf97eebc08c4ccd940320fa1813c6de615bbdee111254ea799302df81722fd154",
+      "sampleAccount": "0xCc23091DE47a988DCB1ac8b0a80B49A14fe0A4ab"
+    },
+    "info": {
+      "url": "https://merlinchain.io/",
+      "source": "https://github.com/merlin",
+      "rpc": "https://testnet-rpc.merlinchain.io",
+      "documentation": "https://docs.merlinchain.io/merlin-docs/"
+    }
+  },
+  {
+    "id": "merlintestnet",
+    "name": "Merlin Testnet",
+    "coinId": 10686868,
+    "symbol": "MNT",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "686868",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://testnet-scan.merlinchain.io",
+      "txPath": "/tx",
+      "accountPath": "/address/",
+      "sampleTx": "0xf97eebc08c4ccd940320fa1813c6de615bbdee111254ea799302df81722fd154",
+      "sampleAccount": "0xCc23091DE47a988DCB1ac8b0a80B49A14fe0A4ab"
+    },
+    "info": {
+      "url": "https://merlinchain.io/",
+      "source": "https://github.com/merlin",
+      "rpc": "https://testnet-rpc.merlinchain.io",
+      "documentation": "https://docs.merlinchain.io/merlin-docs/"
+    }
+  },
+  {
     "id": "goerli",
     "name": "Goerli",
     "coinId": 10000005,

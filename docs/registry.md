@@ -119,6 +119,7 @@ This list is generated from [./registry.json](../registry.json)
 | 10001285 | Moonriver        | MOVR   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/moonriver/info/logo.png" width="32" />    | <https://moonbeam.network/networks/moonriver> |
 | 10002020 | Ronin            | RON    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ronin/info/logo.png" width="32" />        | <https://whitepaper.axieinfinity.com/technology/ronin-ethereum-sidechain> |
 | 10002222 | KavaEvm          | KAVA   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/kavaevm/info/logo.png" width="32" />      | <https://www.kava.io/>        |
+| 10004200 | Merlin           | BTC    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/merlin/info/logo.png" width="32" />       | <https://merlinchain.io/>     |
 | 10004689 | IoTeX EVM        | IOTX   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/iotexevm/info/logo.png" width="32" />     | <https://iotex.io/>           |
 | 10005000 | Mantle           | MNT    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/mantle/info/logo.png" width="32" />       | <https://www.mantle.xyz/>     |
 | 10005001 | Mantle Testnet   | MNT    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/mantletestnet/info/logo.png" width="32" /> | <https://www.mantle.xyz/>     |
@@ -129,6 +130,7 @@ This list is generated from [./registry.json](../registry.json)
 | 10032520 | Bitgert          | BRISE  | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/bitgert/info/logo.png" width="32" />      | <https://bitgert.com>         |
 | 10042170 | Arbitrum Nova    | ETH    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/arbitrumnova/info/logo.png" width="32" /> | <https://nova.arbitrum.io>    |
 | 10042221 | Arbitrum         | ETH    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/arbitrum/info/logo.png" width="32" />     | <https://arbitrum.io>         |
+| 10686868 | Merlin Testnet   | MNT    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/merlintestnet/info/logo.png" width="32" /> | <https://merlinchain.io/>     |
 | 11000118 | Sommelier        | SOMM   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/sommelier/info/logo.png" width="32" />    | <https://www.sommelier.finance/> |
 | 12000118 | Fetch AI         | FET    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/fetchai/info/logo.png" width="32" />      | <https://fetch.ai/>           |
 | 13000118 | Mars Hub         | MARS   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/mars/info/logo.png" width="32" />         | <https://marsprotocol.io/>    |
