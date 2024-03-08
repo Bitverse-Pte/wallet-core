@@ -731,6 +731,38 @@
     }
   },
   {
+    "id": "yymmtestnet",
+    "name": "YymmTestnet",
+    "displayName": "YYMM Testnet Chain",
+    "coinId": 20585858,
+    "symbol": "XBV",
+    "decimals": 18,
+    "chainId": "yymm_585858-1",
+    "blockchain": "Cosmos",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1",
+    "hrp": "yymm",
+    "addressHasher": "sha256ripemd",
+    "explorer": {
+      "url": "https://mintscan.io/cosmos",
+      "txPath": "/txs/",
+      "accountPath": "/account/",
+      "sampleTx": "F236222E4F7C92FA84711FD6451ED22DD56CBDFA319BFDAFB99A21E4E9B9EC2F",
+      "sampleAccount": "yymm1adl7usw7z2dnysyn7wvrghu0u0q6gr7jqs4gtt"
+    },
+    "info": {
+      "url": "https://bitverse.zone",
+      "source": "https://github.com/cosmos/cosmos-sdk",
+      "rpc": "https://node.bitverse-dev.bitverse.zone",
+      "documentation": "https://bitverse.zone"
+    }
+  },
+  {
     "id": "stargaze",
     "name": "Stargaze",
     "displayName": "Stargaze",
@@ -4547,6 +4579,66 @@
       "source": "https://github.com/merlin",
       "rpc": "https://testnet-rpc.merlinchain.io",
       "documentation": "https://docs.merlinchain.io/merlin-docs/"
+    }
+  },
+  {
+    "id": "blast",
+    "name": "Blast",
+    "coinId": 100081457,
+    "symbol": "ETH",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "81457",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://blastscan.io",
+      "txPath": "/tx",
+      "accountPath": "/address/",
+      "sampleTx": "0x744ec6390988dacff34e813c814b1ca073e81409d13a418e0ab6d875b22d3ee8",
+      "sampleAccount": "0x39abb33adb442aab80dac6dc37db2814816df22c"
+    },
+    "info": {
+      "url": "https://blastscan.io/",
+      "source": "https://github.com/BLASTchain",
+      "rpc": "https://rpc.blast.io",
+      "documentation": "https://github.com/BLASTchain/blast"
+    }
+  },
+  {
+    "id": "blasttestnet",
+    "name": "BlastTestnetSepolia",
+    "coinId": 168587773,
+    "symbol": "ETH",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "168587773",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://testnet.blastscan.io",
+      "txPath": "/tx",
+      "accountPath": "/address/",
+      "sampleTx": "0x744ec6390988dacff34e813c814b1ca073e81409d13a418e0ab6d875b22d3ee8",
+      "sampleAccount": "0x39abb33adb442aab80dac6dc37db2814816df22c"
+    },
+    "info": {
+      "url": "https://blastscan.io/",
+      "source": "https://github.com/BLASTchain",
+      "rpc": "https://sepolia.blast.io",
+      "documentation": "https://github.com/BLASTchain/blast"
     }
   },
   {
