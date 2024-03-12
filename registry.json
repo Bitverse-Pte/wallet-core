@@ -745,7 +745,7 @@
       }
     ],
     "curve": "secp256k1",
-    "publicKeyType": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
     "hrp": "yymm",
     "addressHasher": "sha256ripemd",
     "explorer": {
