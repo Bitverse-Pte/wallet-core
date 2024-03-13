@@ -747,7 +747,7 @@
     "curve": "secp256k1",
     "publicKeyType": "secp256k1Extended",
     "hrp": "yymm",
-    "addressHasher": "sha256ripemd",
+    "addressHasher": "keccak256",
     "explorer": {
       "url": "https://mintscan.io/cosmos",
       "txPath": "/txs/",
