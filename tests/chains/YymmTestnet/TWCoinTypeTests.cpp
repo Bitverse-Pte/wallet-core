@@ -26,7 +26,7 @@ TEST(TWYymmTestnetCoinType, TWCoinType) {
 
     assertStringsEqual(id, "yymmtestnet");
     assertStringsEqual(name, "YYMM Testnet Chain");
-    assertStringsEqual(symbol, "XBV");
+    assertStringsEqual(symbol, "BV");
     ASSERT_EQ(TWCoinTypeConfigurationGetDecimals(coin), 18);
     ASSERT_EQ(TWCoinTypeBlockchain(coin), TWBlockchainCosmos);
     ASSERT_EQ(TWCoinTypeP2shPrefix(coin), 0x0);
