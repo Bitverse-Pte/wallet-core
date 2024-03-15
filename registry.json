@@ -737,7 +737,7 @@
     "coinId": 20585858,
     "symbol": "BV",
     "decimals": 18,
-    "chainId": "yymm_585858-1",
+    "chainId": "yymmchain_585858-1",
     "blockchain": "Cosmos",
     "derivation": [
       {
