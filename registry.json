@@ -737,6 +737,38 @@
     "coinId": 20585858,
     "symbol": "BV",
     "decimals": 18,
+    "chainId": "yymm_585858-1",
+    "blockchain": "Cosmos",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "hrp": "yymm",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://mintscan.io/cosmos",
+      "txPath": "/txs/",
+      "accountPath": "/account/",
+      "sampleTx": "F236222E4F7C92FA84711FD6451ED22DD56CBDFA319BFDAFB99A21E4E9B9EC2F",
+      "sampleAccount": "yymm1adl7usw7z2dnysyn7wvrghu0u0q6gr7jqs4gtt"
+    },
+    "info": {
+      "url": "https://bitverse.zone",
+      "source": "https://github.com/cosmos/cosmos-sdk",
+      "rpc": "https://node.bitverse-dev.bitverse.zone",
+      "documentation": "https://bitverse.zone"
+    }
+  },
+  {
+    "id": "yymmdevnet",
+    "name": "YymmDevnet",
+    "displayName": "YYMM Devnet Chain",
+    "coinId": 21585858,
+    "symbol": "BV",
+    "decimals": 18,
     "chainId": "yymmchain_585858-1",
     "blockchain": "Cosmos",
     "derivation": [
