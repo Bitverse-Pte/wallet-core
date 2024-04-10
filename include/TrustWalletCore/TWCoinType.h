@@ -185,6 +185,7 @@ enum TWCoinType {
     TWCoinTypeBlast = 100081457,
     TWCoinTypeBlastTestnetSepolia = 168587773,
     TWCoinTypeYymmTestnet = 20585858,
+    TWCoinTypeYymmDevnet = 21585858,
 };
 
 /// Returns the blockchain for a coin type.
