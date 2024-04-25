@@ -731,9 +731,9 @@
     }
   },
   {
-    "id": "yymmmainnet",
-    "name": "YymmMainnet",
-    "displayName": "YYMM Mainnet Chain",
+    "id": "yymm",
+    "name": "Yymm",
+    "displayName": "YYMM",
     "coinId": 20005858,
     "symbol": "BV",
     "decimals": 18,
