@@ -143,6 +143,7 @@ This list is generated from [./registry.json](../registry.json)
 | 20000001 | Bitcoin Testnet  | BTC    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/bitcointestnet/info/logo.png" width="32" /> | <https://bitcoin.org>         |
 | 20000118 | Stargaze         | STARS  | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/stargaze/info/logo.png" width="32" />     | <https://www.stargaze.zone/>  |
 | 20000714 | BNB Smart Chain  | BNB    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartchain/info/logo.png" width="32" />   | <https://www.binance.org/en/smartChain> |
+| 20005858 | YYMM             | BV     | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/yymm/info/logo.png" width="32" />         | <https://bitverse.zone>       |
 | 20009001 | Native Evmos     | EVMOS  | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/nativeevmos/info/logo.png" width="32" />  | <https://evmos.org/>          |
 | 20585858 | YYMM Testnet Chain | BV     | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/yymmtestnet/info/logo.png" width="32" />  | <https://bitverse.zone>       |
 | 21585858 | YYMM Devnet Chain | BV     | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/yymmdevnet/info/logo.png" width="32" />   | <https://bitverse.zone>       |
