@@ -4764,5 +4764,96 @@
       "rpc": "https://dedicated.brisescan.com",
       "documentation": "https://bitgert.zendesk.com/hc/en-us"
     }
+  },
+  {
+    "id": "mantlesepoliatestnet",
+    "name": "Mantle Sepolia Testnet",
+    "coinId": 10005003,
+    "symbol": "MNT",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "5003",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://explorer.sepolia.mantle.xyz",
+      "txPath": "/tx",
+      "accountPath": "/address/",
+      "sampleTx": "0xf97eebc08c4ccd940320fa1813c6de615bbdee111254ea799302df81722fd154",
+      "sampleAccount": "0xCc23091DE47a988DCB1ac8b0a80B49A14fe0A4ab"
+    },
+    "info": {
+      "url": "https://www.mantle.xyz/",
+      "source": "https://github.com/mantlenetworkio",
+      "rpc": "https://rpc.sepolia.mantle.xyz",
+      "documentation": "https://docs.mantle.xyz/"
+    }
+  },
+  {
+    "id": "sepolia",
+    "name": "Sepolia Testnet",
+    "coinId": 11155111,
+    "symbol": "ETH",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "11155111",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://sepolia.etherscan.io",
+      "txPath": "/tx",
+      "accountPath": "/address/",
+      "sampleTx": "0xf97eebc08c4ccd940320fa1813c6de615bbdee111254ea799302df81722fd154",
+      "sampleAccount": "0xCc23091DE47a988DCB1ac8b0a80B49A14fe0A4ab"
+    },
+    "info": {
+      "url": "https://ethereum.org/",
+      "source": "GitHub - ethereum/go-ethereum: Go implementation of the Ethereum protocol",
+      "rpc": "https://mainnet.infura.io",
+      "documentation": "https://eth.wiki/json-rpc/API"
+    }
+  },
+  {
+    "id": "avalanchefujitestnet",
+    "name": "Avalanche Fuji Testnet",
+    "coinId": 10043113,
+    "symbol": "AVAX",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "43113",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://testnet.snowtrace.io",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x9243890b844219accefd8798271052f5a056453ec18984a56e81c92921330d54",
+      "sampleAccount": "0xa664325f36Ec33E66323fe2620AF3f2294b2Ef3A"
+    },
+    "info": {
+      "url": "https://www.avalabs.org/",
+      "client": "https://github.com/ava-labs/avalanchego",
+      "clientPublic": "https://api.avax-test.network/ext/bc/C/rpc",
+      "clientDocs": "https://docs.avax.network/"
+    },
+    "testFolderName": "Avalanche"
   }
 ]
