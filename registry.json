@@ -4855,5 +4855,65 @@
       "clientDocs": "https://docs.avax.network/"
     },
     "testFolderName": "Avalanche"
+  },
+  {
+    "id": "bitlayer",
+    "name": "Bitlayer Mainnet",
+    "coinId": 10200901,
+    "symbol": "BTC",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "200901",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://www.btrscan.com",
+      "txPath": "/tx",
+      "accountPath": "/address/",
+      "sampleTx": "0xf97eebc08c4ccd940320fa1813c6de615bbdee111254ea799302df81722fd154",
+      "sampleAccount": "0xCc23091DE47a988DCB1ac8b0a80B49A14fe0A4ab"
+    },
+    "info": {
+      "url": "https://bitlayer.org/",
+      "source": "https://github.com/bitlayer-org/bitlayer-l2.git",
+      "rpc": "https://rpc.bitlayer.org",
+      "documentation": "https://docs.bitlayer.org"
+    }
+  },
+  {
+    "id": "bitlayertestnet",
+    "name": "Bitlayer Testnet",
+    "coinId": 10200810,
+    "symbol": "BTC",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "200810",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://testnet-scan.bitlayer.org",
+      "txPath": "/tx",
+      "accountPath": "/address/",
+      "sampleTx": "0xf97eebc08c4ccd940320fa1813c6de615bbdee111254ea799302df81722fd154",
+      "sampleAccount": "0xCc23091DE47a988DCB1ac8b0a80B49A14fe0A4ab"
+    },
+    "info": {
+      "url": "https://bitlayer.org/",
+      "source": "https://github.com/bitlayer-org/bitlayer-l2.git",
+      "rpc": "https://testnet-rpc.bitlayer.org",
+      "documentation": "https://docs.bitlayer.org"
+    }
   }
 ]
