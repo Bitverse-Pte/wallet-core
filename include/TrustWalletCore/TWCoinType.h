@@ -190,6 +190,8 @@ enum TWCoinType {
     TWCoinTypeMantleSepoliaTestnet = 10005003,
     TWCoinTypeSepoliaTestnet = 11155111,
     TWCoinTypeAvalancheFujiTestnet = 10043113,
+    TWCoinTypeBitlayerMainnet = 10200901,
+    TWCoinTypeBitlayerTestnet = 10200810,
 };
 
 /// Returns the blockchain for a coin type.
