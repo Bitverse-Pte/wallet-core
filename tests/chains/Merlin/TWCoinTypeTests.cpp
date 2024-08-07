@@ -1,27 +1,19 @@
-// Copyright © 2017-2023 Trust Wallet.
+// SPDX-License-Identifier: Apache-2.0
 //
-// This file is part of Trust. The full Trust copyright notice, including
-// terms governing use, modification, and redistribution, is contained in the
-// file LICENSE at the root of the source code distribution tree.
-//
-// This is a GENERATED FILE, changes made here MAY BE LOST.
-// Generated one-time (codegen/bin/cointests)
-//
+// Copyright © 2017 Trust Wallet.
 
 #include "TestUtilities.h"
 #include <TrustWalletCore/TWCoinTypeConfiguration.h>
 #include <gtest/gtest.h>
-
 
 TEST(TWMerlinCoinType, TWCoinType) {
     const auto coin = TWCoinTypeMerlin;
     const auto symbol = WRAPS(TWCoinTypeConfigurationGetSymbol(coin));
     const auto id = WRAPS(TWCoinTypeConfigurationGetID(coin));
     const auto name = WRAPS(TWCoinTypeConfigurationGetName(coin));
-    const auto chainId = WRAPS(TWCoinTypeChainId(coin));
-    const auto txId = WRAPS(TWStringCreateWithUTF8Bytes("0xf97eebc08c4ccd940320fa1813c6de615bbdee111254ea799302df81722fd154"));
+    const auto txId = WRAPS(TWStringCreateWithUTF8Bytes("0xca6f2891959b669237738dd0bc2c1051d966778c9de90b94165032ce58364212"));
     const auto txUrl = WRAPS(TWCoinTypeConfigurationGetTransactionURL(coin, txId.get()));
-    const auto accId = WRAPS(TWStringCreateWithUTF8Bytes("0xCc23091DE47a988DCB1ac8b0a80B49A14fe0A4ab"));
+    const auto accId = WRAPS(TWStringCreateWithUTF8Bytes("0xf7e017b3f61bD3410A3b03D7DAD7699FD6780584"));
     const auto accUrl = WRAPS(TWCoinTypeConfigurationGetAccountURL(coin, accId.get()));
 
     assertStringsEqual(id, "merlin");
@@ -29,9 +21,9 @@ TEST(TWMerlinCoinType, TWCoinType) {
     assertStringsEqual(symbol, "BTC");
     ASSERT_EQ(TWCoinTypeConfigurationGetDecimals(coin), 18);
     ASSERT_EQ(TWCoinTypeBlockchain(coin), TWBlockchainEthereum);
-    ASSERT_EQ(TWCoinTypeP2shPrefix(coin), 0x0);
-    ASSERT_EQ(TWCoinTypeStaticPrefix(coin), 0x0);
-    assertStringsEqual(chainId, "4200");
-    assertStringsEqual(txUrl, "https://scan.merlinchain.io/tx0xf97eebc08c4ccd940320fa1813c6de615bbdee111254ea799302df81722fd154");
-    assertStringsEqual(accUrl, "https://scan.merlinchain.io/address/0xCc23091DE47a988DCB1ac8b0a80B49A14fe0A4ab");
+    ASSERT_EQ(TWCoinTypeP2pkhPrefix(coin), 0);
+    ASSERT_EQ(TWCoinTypeP2shPrefix(coin), 0);
+    ASSERT_EQ(TWCoinTypeStaticPrefix(coin), 0);
+    assertStringsEqual(txUrl, "https://scan.merlinchain.io/tx/0xca6f2891959b669237738dd0bc2c1051d966778c9de90b94165032ce58364212");
+    assertStringsEqual(accUrl, "https://scan.merlinchain.io/address/0xf7e017b3f61bD3410A3b03D7DAD7699FD6780584");
 }

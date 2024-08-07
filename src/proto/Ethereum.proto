@@ -9,7 +9,7 @@ import "Common.proto";
 message Transaction {
     // Native coin transfer transaction
     message Transfer {
-        // Amount to send in wei (uint256, serialized little endian)
+        // Amount to send in wei (uint256, serialized big endian)
         bytes amount = 1;
 
         // Optional payload data
@@ -21,7 +21,7 @@ message Transaction {
         // destination address (string)
         string to = 1;
 
-        // Amount to send (uint256, serialized little endian)
+        // Amount to send (uint256, serialized big endian)
         bytes amount = 2;
     }
 
@@ -30,7 +30,7 @@ message Transaction {
         // Target of the approval
         string spender = 1;
 
-        // Amount to send (uint256, serialized little endian)
+        // Amount to send (uint256, serialized big endian)
         bytes amount = 2;
     }
 
@@ -42,7 +42,7 @@ message Transaction {
         // Destination address
         string to = 2;
 
-        // ID of the token (uint256, serialized little endian)
+        // ID of the token (uint256, serialized big endian)
         bytes token_id = 3;
     }
 
@@ -54,10 +54,10 @@ message Transaction {
         // Destination address
         string to = 2;
 
-        // ID of the token (uint256, serialized little endian)
+        // ID of the token (uint256, serialized big endian)
         bytes token_id = 3;
 
-        // The amount of tokens being transferred (uint256, serialized little endian)
+        // The amount of tokens being transferred (uint256, serialized big endian)
         bytes value = 4;
 
         bytes data = 5;
@@ -65,7 +65,7 @@ message Transaction {
 
     // Generic smart contract transaction
     message ContractGeneric {
-        // Amount to send in wei (uint256, serialized little endian)
+        // Amount to send in wei (uint256, serialized big endian)
         bytes amount = 1;
 
         // Contract call payload data
@@ -78,7 +78,7 @@ message Transaction {
             // Recipient addresses.
             string address = 1;
 
-            // Amounts to send in wei (uint256, serialized little endian)
+            // Amounts to send in wei (uint256, serialized big endian)
             bytes amount = 2;
 
             // Contract call payloads data
@@ -136,28 +136,28 @@ message UserOperation {
 // Input data necessary to create a signed transaction.
 // Legacy and EIP2718/EIP1559 transactions supported, see TransactionMode.
 message SigningInput {
-    // Chain identifier (uint256, serialized little endian)
+    // Chain identifier (uint256, serialized big endian)
     bytes chain_id = 1;
 
-    // Nonce (uint256, serialized little endian)
+    // Nonce (uint256, serialized big endian)
     bytes nonce = 2;
 
     // Transaction version selector: Legacy or enveloped, has impact on fee structure.
     // Default is Legacy (value 0)
     TransactionMode tx_mode = 3;
 
-    // Gas price (uint256, serialized little endian)
+    // Gas price (uint256, serialized big endian)
     // Relevant for legacy transactions only (disregarded for enveloped/EIP1559)
     bytes gas_price = 4;
 
-    // Gas limit (uint256, serialized little endian)
+    // Gas limit (uint256, serialized big endian)
     bytes gas_limit = 5;
 
-    // Maximum optional inclusion fee (aka tip) (uint256, serialized little endian)
+    // Maximum optional inclusion fee (aka tip) (uint256, serialized big endian)
     // Relevant for enveloped/EIP1559 transactions only, tx_mode=Enveloped, (disregarded for legacy)
     bytes max_inclusion_fee_per_gas = 6;
 
-    // Maximum fee (uint256, serialized little endian)
+    // Maximum fee (uint256, serialized big endian)
     // Relevant for enveloped/EIP1559 transactions only, tx_mode=Enveloped, (disregarded for legacy)
     bytes max_fee_per_gas = 7;
 
@@ -180,7 +180,7 @@ message SigningOutput {
     // Signed and encoded transaction bytes.
     bytes encoded = 1;
 
-    // The V, R, S components of the resulting signature, (each uint256, serialized little endian)
+    // The V, R, S components of the resulting signature, (each uint256, serialized big endian)
     bytes v = 2;
     bytes r = 3;
     bytes s = 4;
@@ -196,4 +196,60 @@ message SigningOutput {
 
     // Encoded transaction bytes.
     bytes pre_hash = 8;
+}
+
+enum MessageType {
+    // Sign a message following EIP-191.
+    MessageType_legacy = 0;
+    // Sign a message following EIP-191 with EIP-155 replay attack protection.
+    MessageType_eip155 = 1;
+    // Sign a typed message EIP-712 V4.
+    MessageType_typed = 2;
+    // Sign a typed message EIP-712 V4 with EIP-155 replay attack protection.
+    MessageType_typed_eip155 = 3;
+    // Sign a message with Immutable X msg type.
+    MessageType_immutable_x = 4;
+}
+
+message MaybeChainId {
+    // Chain ID.
+    uint64 chain_id = 3;
+}
+
+message MessageSigningInput {
+    // The secret private key used for signing (32 bytes).
+    bytes private_key = 1;
+
+    // Message to sign. Either a regular message or a typed data structured message in JSON format.
+    // Message type should be declared at `message_type`.
+    string message = 2;
+
+    // Optional. Used in replay protection and to check Typed Structured Data input.
+    // Eg. should be set if `message_type` is `MessageType_eip155`, or MessageType_typed, or `MessageType_typed_eip155`.
+    MaybeChainId chain_id = 3;
+
+    // Message type.
+    MessageType message_type = 4;
+}
+
+message MessageSigningOutput {
+    // The signature, Hex-encoded.
+    string signature = 1;
+
+    // error code, 0 is ok, other codes will be treated as errors
+    Common.Proto.SigningError error = 2;
+
+    // error code description
+    string error_message = 3;
+}
+
+message MessageVerifyingInput {
+    // The message signed.
+    string message = 1;
+
+    // Public key that will verify and recover the message from the signature.
+    bytes public_key = 2;
+
+    // The signature, Hex-encoded.
+    string signature = 3;
 }

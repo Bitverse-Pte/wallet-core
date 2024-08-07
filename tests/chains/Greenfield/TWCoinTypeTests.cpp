@@ -1,8 +1,6 @@
-// Copyright © 2017-2023 Trust Wallet.
+// SPDX-License-Identifier: Apache-2.0
 //
-// This file is part of Trust. The full Trust copyright notice, including
-// terms governing use, modification, and redistribution, is contained in the
-// file LICENSE at the root of the source code distribution tree.
+// Copyright © 2017 Trust Wallet.
 //
 // This is a GENERATED FILE, changes made here MAY BE LOST.
 // Generated one-time (codegen/bin/cointests)
@@ -19,9 +17,9 @@ TEST(TWGreenfieldCoinType, TWCoinType) {
     const auto id = WRAPS(TWCoinTypeConfigurationGetID(coin));
     const auto name = WRAPS(TWCoinTypeConfigurationGetName(coin));
     const auto chainId = WRAPS(TWCoinTypeChainId(coin));
-    const auto txId = WRAPS(TWStringCreateWithUTF8Bytes("9F895CF2DD64FB1F428CEFCF2A6585A813C3540FC9FE1EF42DB1DA2CB1DF55AB"));
+    const auto txId = WRAPS(TWStringCreateWithUTF8Bytes("0x150eac42070957115fd538b1f348fadd78d710fb641c248120efcf35d1e7e4f3"));
     const auto txUrl = WRAPS(TWCoinTypeConfigurationGetTransactionURL(coin, txId.get()));
-    const auto accId = WRAPS(TWStringCreateWithUTF8Bytes("0x9d1d97adfcd324bbd603d3872bd78e04098510b1"));
+    const auto accId = WRAPS(TWStringCreateWithUTF8Bytes("0xcf0f6b88ed72653b00fdebbffc90b98072cb3285"));
     const auto accUrl = WRAPS(TWCoinTypeConfigurationGetAccountURL(coin, accId.get()));
 
     assertStringsEqual(id, "greenfield");
@@ -31,7 +29,7 @@ TEST(TWGreenfieldCoinType, TWCoinType) {
     ASSERT_EQ(TWCoinTypeBlockchain(coin), TWBlockchainGreenfield);
     ASSERT_EQ(TWCoinTypeP2shPrefix(coin), 0x0);
     ASSERT_EQ(TWCoinTypeStaticPrefix(coin), 0x0);
-    assertStringsEqual(chainId, "5600");
-    assertStringsEqual(txUrl, "https://greenfieldscan.com/tx/9F895CF2DD64FB1F428CEFCF2A6585A813C3540FC9FE1EF42DB1DA2CB1DF55AB");
-    assertStringsEqual(accUrl, "https://greenfieldscan.com/account/0x9d1d97adfcd324bbd603d3872bd78e04098510b1");
+    assertStringsEqual(chainId, "1017");
+    assertStringsEqual(txUrl, "https://greenfieldscan.com/tx/0x150eac42070957115fd538b1f348fadd78d710fb641c248120efcf35d1e7e4f3");
+    assertStringsEqual(accUrl, "https://greenfieldscan.com/account/0xcf0f6b88ed72653b00fdebbffc90b98072cb3285");
 }

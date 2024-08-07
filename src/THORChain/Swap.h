@@ -1,8 +1,6 @@
-// Copyright © 2017-2023 Trust Wallet.
+// SPDX-License-Identifier: Apache-2.0
 //
-// This file is part of Trust. The full Trust copyright notice, including
-// terms governing use, modification, and redistribution, is contained in the
-// file LICENSE at the root of the source code distribution tree.
+// Copyright © 2017 Trust Wallet.
 
 #pragma once
 
@@ -27,7 +25,8 @@ enum Chain {
     BCH = 5,
     LTC = 6,
     ATOM = 7,
-    AVAX = 8
+    AVAX = 8,
+    BSC = 9,
 };
 
 using SwapErrorCode = int;

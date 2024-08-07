@@ -1,8 +1,6 @@
-// Copyright © 2017-2023 Trust Wallet.
+// SPDX-License-Identifier: Apache-2.0
 //
-// This file is part of Trust. The full Trust copyright notice, including
-// terms governing use, modification, and redistribution, is contained in the
-// file LICENSE at the root of the source code distribution tree.
+// Copyright © 2017 Trust Wallet.
 
 #include "Base58.h"
 #include "Bitcoin/Address.h"
@@ -10,12 +8,10 @@
 #include "Bitcoin/SegwitAddress.h"
 #include "IoTeX/Address.h"
 #include "Cosmos/Address.h"
-#include "Sui/Address.h"
 #include "Coin.h"
 #include "Ethereum/Address.h"
 #include "Ethereum/EIP2645.h"
 #include "Ethereum/MessageSigner.h"
-#include "Ethereum/Signer.h"
 #include "HDWallet.h"
 #include "Hash.h"
 #include "Hedera/DER.h"
@@ -443,18 +439,6 @@ TEST(HDWallet, AptosKey) {
     }
 }
 
-TEST(HDWallet, SuiKey) {
-    const auto derivPath = "m/44'/784'/0'/0'/0'";
-    HDWallet wallet = HDWallet("cost add execute system fault long raccoon stone paddle column ketchup smile debate wood marble please jar can goddess magnet axis celery rough gold", "");
-    {
-        const auto privateKey = wallet.getKey(TWCoinTypeSui, DerivationPath(derivPath));
-        EXPECT_EQ(hex(privateKey.bytes), "3823dce5288ab55dd1c00d97e91933c613417fdb282a0b8b01a7f5f5a533b266");
-        auto pubkey = privateKey.getPublicKey(TWPublicKeyTypeED25519);
-        EXPECT_EQ(hex(pubkey.bytes), "6a7cdeec16a75c0ff6787bc2356109469033022bb10e826c9d443a9f1fc0bd8e");
-        EXPECT_EQ(TW::Sui::Address(pubkey).string(), "0xd575ad7f18e948462a5cf698f564ef394a752a71fec62493af8a055c012c0d50");
-    }
-}
-
 TEST(HDWallet, HederaKey) {
     // https://github.com/hashgraph/hedera-sdk-js/blob/e0cd39c84ab189d59a6bcedcf16e4102d7bb8beb/packages/cryptography/test/unit/Mnemonic.js#L47
     {
@@ -478,11 +462,8 @@ TEST(HDWallet, HederaKey) {
 }
 
 TEST(HDWallet, FromSeedStark) {
-    std::string signature = "0x5a263fad6f17f23e7c7ea833d058f3656d3fe464baf13f6f5ccba9a2466ba2ce4c4a250231bcac7beb165aec4c9b049b4ba40ad8dd287dc79b92b1ffcf20cdcf1b";
-    auto data = parse_hex(signature);
-    auto ethSignature = Ethereum::Signer::signatureDataToStructSimple(data);
-    auto seed = store(ethSignature.s);
-    ASSERT_EQ(ethSignature.s, uint256_t("34506778598894488719068064129252410649539581100963007245393949841529394744783"));
+    auto seed = parse_hex("4c4a250231bcac7beb165aec4c9b049b4ba40ad8dd287dc79b92b1ffcf20cdcf");
+    ASSERT_EQ(load(seed), uint256_t("34506778598894488719068064129252410649539581100963007245393949841529394744783"));
     auto derivationPath = DerivationPath("m/2645'/579218131'/211006541'/1534045311'/1431804530'/1");
     auto key = HDWallet<32>::bip32DeriveRawSeed(TWCoinTypeEthereum, seed, derivationPath);
     ASSERT_EQ(hex(key.bytes), "57384e99059bb1c0e51d70f0fca22d18d7191398dd39d6b9b4e0521174b2377a");

@@ -1,8 +1,6 @@
-// Copyright © 2017-2023 Trust Wallet.
+// SPDX-License-Identifier: Apache-2.0
 //
-// This file is part of Trust. The full Trust copyright notice, including
-// terms governing use, modification, and redistribution, is contained in the
-// file LICENSE at the root of the source code distribution tree.
+// Copyright © 2017 Trust Wallet.
 
 #include "Signer.h"
 #include "Hash.h"
@@ -17,18 +15,44 @@
 namespace TW::Bitcoin {
 
 Proto::TransactionPlan Signer::plan(const Proto::SigningInput& input) noexcept {
+    if (input.has_signing_v2()) {
+        Proto::TransactionPlan plan;
+
+        // Forward the `Bitcoin.Proto.SigningInput.signing_v2` request to Rust.
+        auto signingV2Data = data(input.signing_v2().SerializeAsString());
+        Rust::TWDataWrapper signingV2DataPtr(signingV2Data);
+        Rust::TWDataWrapper transactionPlanV2DataPtr = Rust::tw_any_signer_plan(signingV2DataPtr.get(), input.coin_type());
+
+        auto transactionPlanV2Data = transactionPlanV2DataPtr.toDataOrDefault();
+        BitcoinV2::Proto::TransactionPlan transactionPlanV2;
+        transactionPlanV2.ParseFromArray(transactionPlanV2Data.data(), static_cast<int>(transactionPlanV2Data.size()));
+
+        // Set `Bitcoin.Proto.TransactionPlan.planning_result_v2`. Remain other fields default.
+        *plan.mutable_planning_result_v2() = transactionPlanV2;
+        return plan;
+    }
+
     auto plan = TransactionSigner<Transaction, TransactionBuilder>::plan(input);
     return plan.proto();
 }
 
 Proto::SigningOutput Signer::sign(const Proto::SigningInput& input, std::optional<SignaturePubkeyList> optionalExternalSigs) noexcept {
     Proto::SigningOutput output;
-    if (input.is_it_brc_operation()) {
-        auto serializedInput = data(input.SerializeAsString());
-        Rust::CByteArrayWrapper res = Rust::tw_taproot_build_and_sign_transaction(serializedInput.data(), serializedInput.size());
-        output.ParseFromArray(res.data.data(), static_cast<int>(res.data.size()));
+    if (input.has_signing_v2()) {
+        // Forward the `Bitcoin.Proto.SigningInput.signing_v2` request to Rust.
+        auto signingV2Data = data(input.signing_v2().SerializeAsString());
+        Rust::TWDataWrapper signingV2DataPtr(signingV2Data);
+        Rust::TWDataWrapper signingOutputV2DataPtr = Rust::tw_any_signer_sign(signingV2DataPtr.get(), input.coin_type());
+
+        auto signingOutputV2Data = signingOutputV2DataPtr.toDataOrDefault();
+        BitcoinV2::Proto::SigningOutput signingOutputV2;
+        signingOutputV2.ParseFromArray(signingOutputV2Data.data(), static_cast<int>(signingOutputV2Data.size()));
+
+        // Set `Bitcoin.Proto.SigningOutput.signing_result_v2`. Remain other fields default.
+        *output.mutable_signing_result_v2() = signingOutputV2;
         return output;
     }
+
     auto result = TransactionSigner<Transaction, TransactionBuilder>::sign(input, false, optionalExternalSigs);
     if (!result) {
         output.set_error(result.error());

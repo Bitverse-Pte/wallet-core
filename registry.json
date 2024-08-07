@@ -34,9 +34,9 @@
     "publicKeyHasher": "sha256ripemd",
     "base58Hasher": "sha256d",
     "explorer": {
-      "url": "https://blockchair.com",
-      "txPath": "/bitcoin/transaction/",
-      "accountPath": "/bitcoin/address/",
+      "url": "https://mempool.space",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
       "sampleTx": "0607f62530b68cfcc91c57a1702841dd399a899d0eecda8e31ecca3f52f01df2",
       "sampleAccount": "17A16QmavnUfCW11DAApiJxp7ARnxN5pGX"
     },
@@ -450,6 +450,36 @@
       "source": "https://github.com/LineaLabs",
       "rpc": "https://rpc.linea.build",
       "documentation": "https://docs.linea.build"
+    }
+  },
+  {
+    "id": "zeneon",
+    "name": "Zen EON",
+    "coinId": 7332,
+    "symbol": "ZEN",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "7332",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://eon-explorer.horizenlabs.io",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0xb462e3dac8eef21957d3b6cff3c184d083434367a726dd871e98a774f4d037a5",
+      "sampleAccount": "0x09bCfC348101B1179BCF3837aC996cF09357215f"
+    },
+    "info": {
+      "url": "https://eon.horizen.io",
+      "source": "https://github.com/HorizenOfficial/eon",
+      "rpc": "https://eon-rpc.horizenlabs.io/ethv1",
+      "documentation": "https://eon.horizen.io/docs"
     }
   },
   {
@@ -1245,6 +1275,36 @@
     }
   },
   {
+    "id": "tia",
+    "name": "Tia",
+    "displayName": "Celestia",
+    "coinId": 21000118,
+    "symbol": "TIA",
+    "decimals": 6,
+    "blockchain": "Cosmos",
+    "chainId": "celestia",
+    "derivation": [
+      {
+        "path": "m/44'/118'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1",
+    "hrp": "celestia",
+    "addressHasher": "sha256ripemd",
+    "explorer": {
+      "url": "https://www.mintscan.io/celestia",
+      "txPath": "/txs/",
+      "accountPath": "/account/",
+      "sampleTx": "FF370C65D8D67B8236F9D3A8D2B1256337C60C1965092CADD1FA970288FCE99B",
+      "sampleAccount": "celestia1tt4tv4jrs4twdtzwywxd8u65duxgk8y73wvfu2"
+    },
+    "info": {
+      "url": "https://celestia.org/",
+      "documentation": "https://docs.celestia.org/"
+    }
+  },
+  {
     "id": "coreum",
     "name": "Coreum",
     "displayName": "Coreum",
@@ -1546,7 +1606,7 @@
       "url": "https://blockchair.com/stellar",
       "txPath": "/transaction/",
       "accountPath": "/account/",
-      "sampleTx": "d9aeabfa9d24df8c5755125f8af243b74cd3ff878656cfa72c566a8824bf6e84",
+      "sampleTx": "8a7ff7261e8b3f31af7f6ed257c2e9fe7c47afcd9b1ce1be1bfc1bc5f6a3ad9e",
       "sampleAccount": "GCILJZQ3CKBKBUJWW4TAM6Q37LJA5MQX6GMSFSQN75BPLWIZ33OPRG52"
     },
     "info": {
@@ -1607,9 +1667,9 @@
     "publicKeyType": "ed25519Blake2b",
     "url": "https://nano.org",
     "explorer": {
-      "url": "https://nanocrawler.cc",
-      "txPath": "/explorer/block/",
-      "accountPath": "/explorer/account/",
+      "url": "https://www.nanolooker.com",
+      "txPath": "/block/",
+      "accountPath": "/account/",
       "sampleTx": "C264DB7BF40738F0CEFF19B606746CB925B713E4B8699A055699E0DC8ABBC70F",
       "sampleAccount": "nano_1wpj616kwhe1y38y1mspd8aub8i334cwybqco511iyuxm55zx8d67ptf1tsf"
     },
@@ -1641,7 +1701,7 @@
     "publicKeyHasher": "sha256ripemd",
     "base58Hasher": "sha256d",
     "explorer": {
-      "url": "https://ravencoin.network",
+      "url": "https://blockbook.ravencoin.org",
       "txPath": "/tx/",
       "accountPath": "/address/"
     },
@@ -1828,9 +1888,9 @@
     "curve": "ed25519",
     "publicKeyType": "ed25519",
     "explorer": {
-      "url": "https://algoexplorer.io",
-      "txPath": "/tx/",
-      "accountPath": "/address/",
+      "url": "https://app.dappflow.org/explorer",
+      "txPath": "/transaction/",
+      "accountPath": "/account/",
       "sampleTx": "CR7POXFTYDLC7TV3IXHA7AZKWABUJC52BACLHJQNXAKZJGRPQY3A",
       "sampleAccount": "J4AEINCSSLDA7LNBNWM4ZXFCTLTOZT5LG3F5BLMFPJYGFWVCMU37EZI2AM"
     },
@@ -1841,7 +1901,6 @@
       "documentation": "https://developer.algorand.org/docs/algod-rest-paths"
     }
   },
-
   {
     "id": "iotex",
     "name": "IoTeX",
@@ -2083,9 +2142,9 @@
     "curve": "ed25519",
     "publicKeyType": "ed25519",
     "explorer": {
-      "url": "https://explorer.near.org",
-      "txPath": "/transactions/",
-      "accountPath": "/accounts/",
+      "url": "https://nearblocks.io",
+      "txPath": "/txns/",
+      "accountPath": "/address/",
       "sampleTx": "FPQAMaVnvFHNwNBJWnTttXfdJhp5FvMGGDJEesB8gvbL",
       "sampleAccount": "test-trust.vlad.near"
     },
@@ -2346,11 +2405,11 @@
     "hrp": "band",
     "addressHasher": "sha256ripemd",
     "explorer": {
-      "url": "https://scan-wenchang-testnet2.bandchain.org/",
+      "url": "https://www.mintscan.io/band",
       "txPath": "/tx/",
       "accountPath": "/account/",
-      "sampleTx": "473264551D3063A9EC64EC251C61BE92DDDFCF6CC46D026D1E574D83D5447173",
-      "sampleAccount": "band12nmsm9khdsv0tywge43q3zwj8kkj3hvup9rltp"
+      "sampleTx": "74AF38C2183B06EB6274DA4AAC0D2334E6E283643D436852F5E088AEA2CD0B17",
+      "sampleAccount": "band16gpgu994g2gdrzvwp9047le3pcq9wz6mcgtd4w"
     },
     "info": {
       "url": "https://bandprotocol.com/",
@@ -2489,6 +2548,7 @@
     ],
     "curve": "secp256k1",
     "publicKeyType": "secp256k1",
+    "addressHasher": "sha256ripemd",
     "hrp": "bnb",
     "chainId": "Binance-Chain-Tigris",
     "explorer": {
@@ -2521,6 +2581,7 @@
     ],
     "curve": "secp256k1",
     "publicKeyType": "secp256k1",
+    "addressHasher": "sha256ripemd",
     "hrp": "tbnb",
     "explorer": {
       "url": "https://testnet-explorer.binance.org",
@@ -2622,10 +2683,10 @@
     }
   },
   {
-    "id": "tomochain",
-    "name": "TomoChain",
+    "id": "viction",
+    "name": "Viction",
     "coinId": 889,
-    "symbol": "TOMO",
+    "symbol": "VIC",
     "decimals": 18,
     "blockchain": "Ethereum",
     "derivation": [
@@ -2638,15 +2699,15 @@
     "chainId": "88",
     "addressHasher": "keccak256",
     "explorer": {
-      "url": "https://tomoscan.io",
+      "url": "https://www.vicscan.xyz",
       "txPath": "/tx/",
       "accountPath": "/address/",
       "sampleTx": "0x35a8d3ab06c94d5b7d27221b7c9a24ba3f1710dd0fcfd75c5d59b3a885fd709b",
       "sampleAccount": "0x86cCbD9bfb371c355202086882bC644A7D0b024B"
     },
     "info": {
-      "url": "https://tomochain.com",
-      "source": "https://github.com/tomochain/tomochain",
+      "url": "https://www.viction.xyz/",
+      "source": "https://github.com/BuildOnViction/tomochain",
       "rpc": "https://rpc.tomochain.com",
       "documentation": "https://eth.wiki/json-rpc/API"
     }
@@ -2760,7 +2821,7 @@
       "url": "https://oasisscan.com",
       "txPath": "/transactions/",
       "accountPath": "/accounts/detail/",
-      "sampleTx": "0b9bd4983f1c88a1c71bf33562b6ba02b3064e01697d15a0de4bfe1922ec74b8",
+      "sampleTx": "73dc977fdd8596d4a57e6feb891b21f5da3652d26815dc94f15f7420c298e29e",
       "sampleAccount": "oasis1qrx376dmwuckmruzn9vq64n49clw72lywctvxdf4"
     },
     "info": {
@@ -3226,6 +3287,7 @@
     "curve": "secp256k1",
     "publicKeyType": "secp256k1",
     "hrp": "thor",
+    "addressHasher": "sha256ripemd",
     "chainId": "thorchain-mainnet-v1",
     "explorer": {
       "url": "https://viewblock.io/thorchain",
@@ -3244,7 +3306,7 @@
   {
     "id": "optimism",
     "name": "Optimism",
-    "displayName": "Optimism Ethereum",
+    "displayName": "OP Mainnet",
     "coinId": 10000070,
     "slip44": 60,
     "symbol": "ETH",
@@ -3337,7 +3399,7 @@
     "id": "scroll",
     "name": "Scroll",
     "displayName": "Scroll",
-    "coinId": 534353,
+    "coinId": 534352,
     "slip44": 60,
     "symbol": "ETH",
     "decimals": 18,
@@ -3349,19 +3411,19 @@
     ],
     "curve": "secp256k1",
     "publicKeyType": "secp256k1Extended",
-    "chainId": "534353",
+    "chainId": "534352",
     "addressHasher": "keccak256",
     "explorer": {
-      "url": "https://blockscout.scroll.io",
+      "url": "https://scrollscan.com",
       "txPath": "/tx/",
       "accountPath": "/address/",
-      "sampleTx": "0xee9196d6840c8d31626324d91c886d20e65711c2026c559133fb23741d3b2f9d",
-      "sampleAccount": "0xFE993660cd35d68D94b6Eba29F4D928d979cd65B"
+      "sampleTx": "0xa2062a4530b194a438bb9f9e87cdce59f70775a52e8336892364445847c43ca2",
+      "sampleAccount": "0xf9062b8a30e0d7722960e305049fa50b86ba6253"
     },
     "info": {
       "url": "https://scroll.io",
       "source": "https://github.com/scroll-tech",
-      "rpc": "https://alpha-rpc.scroll.io/l2",
+      "rpc": "https://rpc.scroll.io",
       "documentation": "https://guide.scroll.io"
     }
   },
@@ -4022,7 +4084,7 @@
     "coinId": 20009001,
     "symbol": "EVMOS",
     "decimals": 18,
-    "blockchain": "Cosmos",
+    "blockchain": "NativeEvmos",
     "chainId": "evmos_9001-2",
     "derivation": [
       {
@@ -4176,7 +4238,7 @@
     "publicKeyType": "secp256k1Extended",
     "addressHasher": "keccak256",
     "explorer": {
-      "url": "https://www.oklink.com/en/okc",
+      "url": "https://www.oklink.com/oktc",
       "txPath": "/tx/",
       "accountPath": "/address/",
       "sampleTx": "0x46C3A947E8248570FBD28E4FE456CC8F80DFD90716533878FB67857B95FA3D37",
@@ -4226,7 +4288,7 @@
     "coinId": 5600,
     "symbol": "BNB",
     "decimals": 18,
-    "chainId": "5600",
+    "chainId": "1017",
     "blockchain": "Greenfield",
     "derivation": [
       {
@@ -4240,8 +4302,8 @@
       "url": "https://greenfieldscan.com",
       "txPath": "/tx/",
       "accountPath": "/account/",
-      "sampleTx": "9F895CF2DD64FB1F428CEFCF2A6585A813C3540FC9FE1EF42DB1DA2CB1DF55AB",
-      "sampleAccount": "0x9d1d97adfcd324bbd603d3872bd78e04098510b1"
+      "sampleTx": "0x150eac42070957115fd538b1f348fadd78d710fb641c248120efcf35d1e7e4f3",
+      "sampleAccount": "0xcf0f6b88ed72653b00fdebbffc90b98072cb3285"
     },
     "info": {
       "url": "https://greenfield.bnbchain.org",
@@ -4289,6 +4351,7 @@
     "blockchain": "Bitcoin",
     "derivation": [
       {
+        "name": "segwit",
         "path": "m/44'/105105'/0'/0/0",
         "xpub": "xpub",
         "xprv": "xprv"
@@ -4408,13 +4471,45 @@
     }
   },
   {
+    "id": "dydx",
+    "name": "Dydx",
+    "displayName": "dYdX",
+    "coinId": 22000118,
+    "symbol": "DYDX",
+    "decimals": 18,
+    "blockchain": "Cosmos",
+    "derivation": [
+      {
+        "path": "m/44'/118'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1",
+    "hrp": "dydx",
+    "chainId": "dydx-mainnet-1",
+    "addressHasher": "sha256ripemd",
+    "explorer": {
+      "url": "https://www.mintscan.io/dydx",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "F236222E4F7C92FA84711FD6451ED22DD56CBDFA319BFDAFB99A21E4E9B9EC2F",
+      "sampleAccount": "dydx1adl7usw7z2dnysyn7wvrghu0u0q6gr7jqs4gtt"
+    },
+    "info": {
+      "url": "https://dydx.exchange",
+      "source": "https://github.com/dydxprotocol",
+      "rpc": "https://dydx-dao-api.polkachu.com",
+      "documentation": "https://docs.dydx.exchange"
+    }
+  },
+  {
     "id": "nativeinjective",
     "name": "NativeInjective",
     "displayName": "Native Injective",
     "coinId": 10000060,
     "symbol": "INJ",
     "decimals": 18,
-    "blockchain": "Cosmos",
+    "blockchain": "NativeInjective",
     "derivation": [
       {
         "path": "m/44'/60'/0'/0/0"
@@ -4468,12 +4563,70 @@
     }
   },
   {
+    "id": "zetachain",
+    "name": "NativeZetaChain",
+    "displayName": "NativeZetaChain",
+    "coinId": 10007000,
+    "symbol": "ZETA",
+    "decimals": 18,
+    "blockchain": "Cosmos",
+    "chainId": "zetachain_7000-1",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "hrp": "zeta",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://explorer.zetachain.com",
+      "txPath": "/cosmos/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "2DBB071DDD47985F4470A21E5943CE95D371AE4BDE2267E201D3553FB2BDCFDE",
+      "sampleAccount": "zeta14py36sx57ud82t9yrks9z6hdsrpn5x6kmxs0ne"
+    },
+    "info": {
+      "url": "https://www.zetachain.com/",
+      "documentation": "https://www.zetachain.com/docs/"
+    }
+  },
+  {
+    "id": "zetaevm",
+    "name": "Zeta EVM",
+    "coinId": 20007000,
+    "symbol": "ZETA",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "7000",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://explorer.zetachain.com",
+      "txPath": "/evm/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x04cb1201857de29af97b755e51c888454fb96c1f3bb3c1329bb94d5353d5c19e",
+      "sampleAccount": "0x85539A58F9c88DdDccBaBBfc660968323Fd1e167"
+    },
+    "info": {
+      "url": "https://www.zetachain.com/",
+      "documentation": "https://www.zetachain.com/docs/"
+    }
+  },
+  {
     "id": "ton",
     "name": "TON",
     "coinId": 607,
     "symbol": "TON",
     "decimals": 9,
-    "blockchain": "The Open Network",
+    "blockchain": "TheOpenNetwork",
     "derivation": [
       {
         "path": "m/44'/607'/0'"
@@ -4482,9 +4635,9 @@
     "curve": "ed25519",
     "publicKeyType": "ed25519",
     "explorer": {
-      "url": "https://tonscan.org",
-      "txPath": "/tx/",
-      "accountPath": "/address/",
+      "url": "https://tonviewer.com",
+      "txPath": "/transaction/",
+      "accountPath": "/",
       "sampleTx": "fJXfn0EVhV09HFuEgUHu4Cchb24nUQtIMwSzmzk2tLs=",
       "sampleAccount": "EQCD39VS5jcptHL8vMjEXrzGaRcCVYto7HUn4bpAOg8xqB2N"
     },
@@ -4915,5 +5068,157 @@
       "clientDocs": "https://docs.avax.network/"
     },
     "testFolderName": "Avalanche"
+  },
+  {
+    "id": "internet_computer",
+    "name": "Internet Computer",
+    "coinId": 223,
+    "symbol": "ICP",
+    "decimals": 8,
+    "blockchain": "InternetComputer",
+    "derivation": [
+      {
+        "path": "m/44'/223'/0'/0/0",
+        "xpub": "xpub",
+        "xpriv": "xpriv"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "explorer": {
+      "url": "https://dashboard.internetcomputer.org",
+      "txPath": "/transaction/",
+      "accountPath": "/account/",
+      "sampleTx": "9e32c54975adf84a1d98f19df41bbc34a752a899c32cc9c0000200b2c4308f85",
+      "sampleAccount": "529ea51c22e8d66e8302eabd9297b100fdb369109822248bb86939a671fbc55b"
+    },
+    "info": {
+      "url": "https://internetcomputer.org",
+      "source": "https://github.com/dfinity/ic",
+      "rpc": "",
+      "documentation": "https://internetcomputer.org/docs"
+    }
+  },
+  {
+    "id": "manta",
+    "name": "Manta Pacific",
+    "coinId": 169,
+    "symbol": "ETH",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "169",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://pacific-explorer.manta.network",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x2bbd5d85b0ed05d1416e30ce1197a6f0c27d10ce02593a2719e2baf486d2e8c2",
+      "sampleAccount": "0xF122a1aC569a36a5Cf6d0F828A22254c8A9afF84"
+    },
+    "info": {
+      "url": "https://pacific.manta.network",
+      "source": "https://github.com/manta-network",
+      "rpc": "https://pacific-rpc.manta.network/http",
+      "documentation": "https://docs.manta.network/docs/Introduction"
+    }
+  },
+  {
+    "id": "lightlink",
+    "name": "Lightlink",
+    "displayName": "Lightlink Phoenix",
+    "coinId": 1890,
+    "symbol": "ETH",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "1890",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://phoenix.lightlink.io",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0xc65f82445aefc883fd4ffe09149c8ce48f61b670c0734528a49d4a8bd8309bb0",
+      "sampleAccount": "0x4566ED6c7a7fFc90E2C7cfF7eB9156262afD2fDe"
+    },
+    "info": {
+      "url": "https://lightlink.io",
+      "source": "https://github.com/lightlink-network",
+      "rpc": "https://endpoints.omniatech.io/v1/lightlink/phoenix/public",
+      "documentation": "https://docs.lightlink.io/lightlink-protocol"
+    }
+  },
+  {
+    "id": "bouncebit",
+    "name": "BounceBit",
+    "coinId": 6001,
+    "symbol": "BB",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "6001",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://bbscan.io",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x52558f4143d058d942e3b73414090266ae3ffce1fe8c25fe86896e2c8e5ef932",
+      "sampleAccount": "0xf4aa7349a9ccca4609943955b5ddc7bd9278c223"
+    },
+    "info": {
+      "url": "https://bouncebit.io",
+      "source": "https://github.com/BounceBit-Labs",
+      "rpc": "https://fullnode-mainnet.bouncebitapi.com",
+      "documentation": "https://docs.bouncebit.io"
+    }
+  },
+  {
+    "id": "zklinknova",
+    "name": "ZkLinkNova",
+    "displayName": "zkLink Nova Mainnet",
+    "coinId": 810180,
+    "symbol": "ETH",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "810180",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://explorer.zklink.io",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0xeb5eb8710369c89115a83f3e744c15c9d388030cfce2fd3a653dbd18f2947400",
+      "sampleAccount": "0xF95115BaD9a4585B3C5e2bfB50579f17163A45aA"
+    },
+    "info": {
+      "url": "https://zklink.io",
+      "source": "https://github.com/zkLinkProtocol",
+      "rpc": "https://rpc.zklink.io",
+      "documentation": "https://docs.zklink.io"
+    }
   }
 ]

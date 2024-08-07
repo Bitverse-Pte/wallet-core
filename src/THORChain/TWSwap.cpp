@@ -1,8 +1,6 @@
-// Copyright © 2017-2023 Trust Wallet.
+// SPDX-License-Identifier: Apache-2.0
 //
-// This file is part of Trust. The full Trust copyright notice, including
-// terms governing use, modification, and redistribution, is contained in the
-// file LICENSE at the root of the source code distribution tree.
+// Copyright © 2017 Trust Wallet.
 
 #include "Data.h"
 #include "Swap.h"
@@ -72,6 +70,7 @@ TWData* _Nonnull TWTHORChainSwapBuildSwap(TWData* _Nonnull input) {
         } break;
 
         case THORChainSwap::Proto::ETH:
+        case THORChainSwap::Proto::BSC:
         case THORChainSwap::Proto::AVAX: {
             Ethereum::Proto::SigningInput ethInput;
             if (!ethInput.ParseFromArray(txInput.data(), static_cast<int>(txInput.size()))) {

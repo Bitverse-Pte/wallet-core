@@ -1,8 +1,6 @@
-// Copyright © 2017-2023 Trust Wallet.
+// SPDX-License-Identifier: Apache-2.0
 //
-// This file is part of Trust. The full Trust copyright notice, including
-// terms governing use, modification, and redistribution, is contained in the
-// file LICENSE at the root of the source code distribution tree.
+// Copyright © 2017 Trust Wallet.
 
 #include "TestUtilities.h"
 #include <TrustWalletCore/TWEthereumMessageSigner.h>
@@ -120,7 +118,7 @@ namespace TW::Ethereum {
                 }
             })";
         auto signature = Ethereum::MessageSigner::signTypedData(ethKey, msg, MessageType::Eip155, 0);
-        ASSERT_EQ(signature, "EIP712 chainId is different than the current chainID.");
+        ASSERT_EQ(signature, "");
     }
 
     TEST(EthereumEip191, SignMessageAndVerifyLegacy) {

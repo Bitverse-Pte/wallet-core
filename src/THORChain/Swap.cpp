@@ -1,8 +1,6 @@
-// Copyright © 2017-2023 Trust Wallet.
+// SPDX-License-Identifier: Apache-2.0
 //
-// This file is part of Trust. The full Trust copyright notice, including
-// terms governing use, modification, and redistribution, is contained in the
-// file LICENSE at the root of the source code distribution tree.
+// Copyright © 2017 Trust Wallet.
 
 #include "Swap.h"
 
@@ -19,8 +17,6 @@
 #include "../proto/Bitcoin.pb.h"
 // ETH
 #include "Ethereum/ABI/Function.h"
-#include "Ethereum/ABI/ParamAddress.h"
-#include "Ethereum/ABI/ParamBase.h"
 #include "Ethereum/Address.h"
 #include "uint256.h"
 #include "../proto/Ethereum.pb.h"
@@ -65,6 +61,8 @@ TWCoinType chainCoinType(Chain chain) {
         return TWCoinTypeLitecoin;
     case Chain::ATOM:
         return TWCoinTypeCosmos;
+    case Chain::BSC:
+        return TWCoinTypeSmartChain;
     case Chain::THOR:
     default:
         return TWCoinTypeTHORChain;
@@ -79,6 +77,8 @@ std::string chainName(Chain chain) {
         return "ETH";
     case Chain::BNB:
         return "BNB";
+    case Chain::BSC:
+        return "BSC";
     case Chain::BTC:
         return "BTC";
     case Chain::DOGE:
@@ -127,6 +127,7 @@ SwapBundled SwapBuilder::build(bool shortened) {
         return buildAtom(fromAmountNum, memo);
     case Chain::ETH:
     case Chain::AVAX:
+    case Chain::BSC:
         return buildEth(fromAmountNum, memo);
     }
     default:
@@ -237,7 +238,7 @@ SwapBundled SwapBuilder::buildEth(const uint256_t& amount, const std::string& me
     Data out;
     auto input = Ethereum::Proto::SigningInput();
     // EIP-1559
-    input.set_tx_mode(Ethereum::Proto::Enveloped);
+    input.set_tx_mode(this->mFromAsset.chain() == Proto::Chain::BSC ? Ethereum::Proto::Legacy : Ethereum::Proto::Enveloped);
     const auto& toTokenId = mFromAsset.token_id();
     // some sanity check / address conversion
     Data vaultAddressBin = ethAddressStringToData(mVaultAddress);
@@ -269,15 +270,19 @@ SwapBundled SwapBuilder::buildEth(const uint256_t& amount, const std::string& me
             mExpirationPolicy = std::chrono::duration_cast<std::chrono::seconds>(in_15_minutes.time_since_epoch()).count();
         }
         auto& transfer = *input.mutable_transaction()->mutable_contract_generic();
-        auto func = Ethereum::ABI::Function("depositWithExpiry", std::vector<std::shared_ptr<Ethereum::ABI::ParamBase>>{
-                                                                     std::make_shared<Ethereum::ABI::ParamAddress>(vaultAddressBin),
-                                                                     std::make_shared<Ethereum::ABI::ParamAddress>(toAssetAddressBin),
-                                                                     std::make_shared<Ethereum::ABI::ParamUInt256>(uint256_t(amount)),
-                                                                     std::make_shared<Ethereum::ABI::ParamString>(memo),
-                                                                     std::make_shared<Ethereum::ABI::ParamUInt256>(uint256_t(*mExpirationPolicy))});
-        Data payload;
-        func.encode(payload);
-        transfer.set_data(payload.data(), payload.size());
+
+        // Ethereum::ABI::AbiProto::NamedParam
+        auto payload = Ethereum::ABI::Function::encodeFunctionCall("depositWithExpiry", {
+            std::make_shared<Ethereum::ABI::ProtoAddress>(mVaultAddress),
+            std::make_shared<Ethereum::ABI::ProtoAddress>(toTokenId),
+            std::make_shared<Ethereum::ABI::ProtoUInt256>(amount),
+            std::make_shared<Ethereum::ABI::ProtoString>(memo),
+            std::make_shared<Ethereum::ABI::ProtoUInt256>(uint256_t(*mExpirationPolicy)),
+        });
+        if (payload.has_value()) {
+            transfer.set_data(payload.value().data(), payload.value().size());
+        }
+
         Data amountData = store(uint256_t(0));
         // if tokenId is set to 0x0000000000000000000000000000000000000000 this means we are sending ethereum and transfer amount also need to be set
         if (toTokenId == "0x0000000000000000000000000000000000000000") {
