@@ -79,7 +79,6 @@ TEST(Coin, DeriveAddress) {
         case TWCoinTypeNeon:
         case TWCoinTypeBase:
         case TWCoinTypeLinea:
-        case TWCoinTypeMantle:
         case TWCoinTypeMantleTestnet:
         case TWCoinTypeGoerli:
         case TWCoinTypeGreenfield:

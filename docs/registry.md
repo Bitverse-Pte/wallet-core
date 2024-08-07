@@ -159,8 +159,8 @@ This list is generated from [./registry.json](../registry.json)
 | 20007000 | Zeta EVM         | ZETA   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/zetaevm/info/logo.png" width="32" />      | <https://www.zetachain.com/>  |
 | 20009001 | Native Evmos     | EVMOS  | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/nativeevmos/info/logo.png" width="32" />  | <https://evmos.org/>          |
 | 20585858 | YYMM Testnet Chain | BV     | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/yymmtestnet/info/logo.png" width="32" />  | <https://bitverse.zone>       |
-| 21585858 | YYMM Devnet Chain | BV     | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/yymmdevnet/info/logo.png" width="32" />   | <https://bitverse.zone>       |
 | 21000118 | Celestia         | TIA    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/tia/info/logo.png" width="32" />          | <https://celestia.org/>       |
+| 21585858 | YYMM Devnet Chain | BV     | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/yymmdevnet/info/logo.png" width="32" />   | <https://bitverse.zone>       |
 | 22000118 | dYdX             | DYDX   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/dydx/info/logo.png" width="32" />         | <https://dydx.exchange>       |
 | 30000118 | Juno             | JUNO   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/juno/info/logo.png" width="32" />         | <https://www.junonetwork.io/> |
 | 30000714 | TBNB             | BNB    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/tbinance/info/logo.png" width="32" />     | <https://www.bnbchain.org>    |
