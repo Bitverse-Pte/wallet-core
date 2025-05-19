@@ -5039,6 +5039,66 @@
     }
   },
   {
+    "id": "hyperevm",
+    "name": "HyperEVM",
+    "coinId": 10000999,
+    "symbol": "HYPE",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "999",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://app.hyperliquid.xyz/explorer",
+      "txPath": "/tx",
+      "accountPath": "/address/",
+      "sampleTx": "0x557ed1b7d620f69161f90423be0d1e0000ae1eff8e61ec9c363fbcf6a5d45f7d",
+      "sampleAccount": "0x9db9cd2b0e40c139b487752ee13586956fbe626a"
+    },
+    "info": {
+      "url": "https://hyperliquid.gitbook.io/",
+      "source": "https://github.com/HyperDevCommunity/AwesomeHyperEVM",
+      "rpc": "https://rpc.hyperliquid.xyz/evm",
+      "documentation": "https://hyperliquid.gitbook.io/"
+    }
+  },
+  {
+    "id": "hyperevmtestnet",
+    "name": "HyperEVM Testnet",
+    "coinId": 10000998,
+    "symbol": "HYPE",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "998",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://app.hyperliquid-testnet.xyz/explorer",
+      "txPath": "/tx",
+      "accountPath": "/address/",
+      "sampleTx": "0x557ed1b7d620f69161f90423be0d1e0000ae1eff8e61ec9c363fbcf6a5d45f7d",
+      "sampleAccount": "0x9db9cd2b0e40c139b487752ee13586956fbe626a"
+    },
+    "info": {
+      "url": "https://hyperliquid.gitbook.io/",
+      "source": "https://github.com/HyperDevCommunity/AwesomeHyperEVM",
+      "rpc": "https://rpc.hyperliquid-testnet.xyz/evm",
+      "documentation": "https://hyperliquid.gitbook.io/"
+    }
+  },
+  {
     "id": "avalanchefujitestnet",
     "name": "Avalanche Fuji Testnet",
     "coinId": 10043113,
