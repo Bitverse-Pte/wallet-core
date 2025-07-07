@@ -203,6 +203,7 @@ enum TWCoinType {
     // end_of_tw_coin_type_marker_do_not_modify
     TWCoinTypeHyperEVM = 10000999,
     TWCoinTypeHyperEVMTestnet = 10000998,
+    TWCoinTypePharosTestnet = 10688688,
 };
 
 /// Returns the blockchain for a coin type.
