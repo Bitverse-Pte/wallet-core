@@ -204,6 +204,7 @@ enum TWCoinType {
     TWCoinTypeHyperEVM = 10000999,
     TWCoinTypeHyperEVMTestnet = 10000998,
     TWCoinTypePharosTestnet = 10688688,
+    TWCoinTypePharosAtlanticTestnet = 10688689,
 };
 
 /// Returns the blockchain for a coin type.

@@ -145,6 +145,7 @@ This list is generated from [./registry.json](../registry.json)
 | 10200901 | Bitlayer Mainnet | BTC    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/bitlayer/info/logo.png" width="32" />     | <https://bitlayer.org/>       |
 | 10686868 | Merlin Testnet   | BTC    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/merlintestnet/info/logo.png" width="32" /> | <https://merlinchain.io/>     |
 | 10688688 | Pharos Testnet   | PHRS   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/pharostestnet/info/logo.png" width="32" /> | <https://pharosnetwork.xyz/>  |
+| 10688689 | Pharos Atlantic Testnet | PHRS   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/pharosatlantictestnet/info/logo.png" width="32" /> | <https://pharosnetwork.xyz/>  |
 | 11000118 | Sommelier        | SOMM   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/sommelier/info/logo.png" width="32" />    | <https://www.sommelier.finance/> |
 | 11155111 | Sepolia Testnet  | ETH    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/sepolia/info/logo.png" width="32" />      | <https://ethereum.org/>       |
 | 12000118 | Fetch AI         | FET    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/fetchai/info/logo.png" width="32" />      | <https://fetch.ai/>           |
