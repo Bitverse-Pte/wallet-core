@@ -125,6 +125,7 @@ This list is generated from [./registry.json](../registry.json)
 | 10001101 | Polygon zkEVM    | ETH    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/polygonzkevm/info/logo.png" width="32" /> | <https://www.polygon.technology/> |
 | 10001284 | Moonbeam         | GLMR   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/moonbeam/info/logo.png" width="32" />     | <https://moonbeam.network>    |
 | 10001285 | Moonriver        | MOVR   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/moonriver/info/logo.png" width="32" />    | <https://moonbeam.network/networks/moonriver> |
+| 10001672 | Pharos           | PHRS   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/pharos/info/logo.png" width="32" />       | <https://pharosnetwork.xyz/>  |
 | 10002020 | Ronin            | RON    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ronin/info/logo.png" width="32" />        | <https://whitepaper.axieinfinity.com/technology/ronin-ethereum-sidechain> |
 | 10002222 | KavaEvm          | KAVA   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/kavaevm/info/logo.png" width="32" />      | <https://www.kava.io/>        |
 | 10004200 | Merlin           | BTC    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/merlin/info/logo.png" width="32" />       | <https://merlinchain.io/>     |

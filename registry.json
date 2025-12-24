@@ -4919,6 +4919,36 @@
     }
   },
   {
+    "id": "pharos",
+    "name": "Pharos",
+    "coinId": 10001672,
+    "symbol": "PHRS",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "1672",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://pharosscan.xyz",
+      "txPath": "/tx",
+      "accountPath": "/address/",
+      "sampleTx": "0x83696ade8e93dc0148836f36bcb1922da093f8b864d58530c6d7fc5b94044e83",
+      "sampleAccount": "0xCc23091DE47a988DCB1ac8b0a80B49A14fe0A4ab"
+    },
+    "info": {
+      "url": "https://pharosnetwork.xyz/",
+      "source": "https://github.com/PharosNetwork",
+      "rpc": "https://api.zan.top/node/v1/pharos/mainnet",
+      "documentation": "https://docs.pharosnetwork.xyz"
+    }
+  },
+  {
     "id": "blast",
     "name": "Blast",
     "coinId": 100081457,
