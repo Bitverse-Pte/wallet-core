@@ -125,7 +125,7 @@ This list is generated from [./registry.json](../registry.json)
 | 10001101 | Polygon zkEVM    | ETH    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/polygonzkevm/info/logo.png" width="32" /> | <https://www.polygon.technology/> |
 | 10001284 | Moonbeam         | GLMR   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/moonbeam/info/logo.png" width="32" />     | <https://moonbeam.network>    |
 | 10001285 | Moonriver        | MOVR   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/moonriver/info/logo.png" width="32" />    | <https://moonbeam.network/networks/moonriver> |
-| 10001672 | Pharos           | PHRS   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/pharos/info/logo.png" width="32" />       | <https://pharosnetwork.xyz/>  |
+| 10001672 | Pharos           | PROS   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/pharos/info/logo.png" width="32" />       | <https://pharosnetwork.xyz/>  |
 | 10002020 | Ronin            | RON    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ronin/info/logo.png" width="32" />        | <https://whitepaper.axieinfinity.com/technology/ronin-ethereum-sidechain> |
 | 10002222 | KavaEvm          | KAVA   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/kavaevm/info/logo.png" width="32" />      | <https://www.kava.io/>        |
 | 10004200 | Merlin           | BTC    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/merlin/info/logo.png" width="32" />       | <https://merlinchain.io/>     |
@@ -161,6 +161,7 @@ This list is generated from [./registry.json](../registry.json)
 | 20000118 | Stargaze         | STARS  | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/stargaze/info/logo.png" width="32" />     | <https://www.stargaze.zone/>  |
 | 20000714 | BNB Smart Chain  | BNB    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartchain/info/logo.png" width="32" />   | <https://www.binance.org/en/smartChain> |
 | 20005858 | YYMM             | BV     | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/yymm/info/logo.png" width="32" />         | <https://bitverse.zone>       |
+| 20006868 | ZIGChain         | ZIG    | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/zigchain/info/logo.png" width="32" />     | <https://zigchain.com>        |
 | 20007000 | Zeta EVM         | ZETA   | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/zetaevm/info/logo.png" width="32" />      | <https://www.zetachain.com/>  |
 | 20009001 | Native Evmos     | EVMOS  | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/nativeevmos/info/logo.png" width="32" />  | <https://evmos.org/>          |
 | 20585858 | YYMM Testnet Chain | BV     | <img src="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/yymmtestnet/info/logo.png" width="32" />  | <https://bitverse.zone>       |

@@ -24,7 +24,7 @@ TEST(TWPharosCoinType, TWCoinType) {
 
     assertStringsEqual(id, "pharos");
     assertStringsEqual(name, "Pharos");
-    assertStringsEqual(symbol, "PHRS");
+    assertStringsEqual(symbol, "PROS");
     ASSERT_EQ(TWCoinTypeConfigurationGetDecimals(coin), 18);
     ASSERT_EQ(TWCoinTypeBlockchain(coin), TWBlockchainEthereum);
     ASSERT_EQ(TWCoinTypeP2shPrefix(coin), 0x0);

@@ -4922,7 +4922,7 @@
     "id": "pharos",
     "name": "Pharos",
     "coinId": 10001672,
-    "symbol": "PHRS",
+    "symbol": "PROS",
     "decimals": 18,
     "blockchain": "Ethereum",
     "derivation": [
@@ -4946,6 +4946,38 @@
       "source": "https://github.com/PharosNetwork",
       "rpc": "https://api.zan.top/node/v1/pharos/mainnet",
       "documentation": "https://docs.pharosnetwork.xyz"
+    }
+  },
+  {
+    "id": "zigchain",
+    "name": "ZIGChain",
+    "displayName": "ZIGChain",
+    "coinId": 20006868,
+    "symbol": "ZIG",
+    "decimals": 6,
+    "chainId": "zigchain-1",
+    "blockchain": "Cosmos",
+    "derivation": [
+      {
+        "path": "m/44'/118'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1",
+    "hrp": "zig",
+    "addressHasher": "sha256ripemd",
+    "explorer": {
+      "url": "https://www.zigscan.org",
+      "txPath": "/tx/",
+      "accountPath": "/account/",
+      "sampleTx": "D6757020EC185410D0073C4D3140544DB2174C95871BB8863A55E3010A269524",
+      "sampleAccount": "zig19786dunggq5090jvxy3pz6fc8hugjg5f2tg60y"
+    },
+    "info": {
+      "url": "https://zigchain.com",
+      "source": "https://github.com/zigchain",
+      "rpc": "https://rpc.zigchain.com",
+      "documentation": "https://docs.zigchain.com"
     }
   },
   {
