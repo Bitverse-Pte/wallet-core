@@ -6,6 +6,11 @@ cmake_minimum_required(VERSION 3.18 FATAL_ERROR)
 
 project(TrustWalletCore)
 
+# Android 16KB page size support
+set(CMAKE_SHARED_LINKER_FLAGS
+    "${CMAKE_SHARED_LINKER_FLAGS} -Wl,-z,max-page-size=16384"
+)
+
 SET(BOOST_ROOT "/usr/local/Cellar/boost")
 # SET(BOOST_ROOT "/usr/local/Cellar/boost/1.84.0_1")
 # SET(Boost_INCLUDE_DIR /opt/homebrew/Cellar/boost/1.82.0_1)
