@@ -4981,6 +4981,36 @@
     }
   },
   {
+    "id": "xlayer",
+    "name": "X Layer",
+    "coinId": 10000196,
+    "symbol": "OKB",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "196",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://www.okx.com/web3/explorer/xlayer",
+      "txPath": "/tx",
+      "accountPath": "/address/",
+      "sampleTx": "0xc6b86eb364b27480a6cbcbb4595f6856bd08b79699eaecaacfaacd395451d9cc",
+      "sampleAccount": "0xfcf39b96958f6deeb93954d2effd973fa6eddddd"
+    },
+    "info": {
+      "url": "https://www.okx.com/xlayer",
+      "source": "https://github.com/okx",
+      "rpc": "https://rpc.xlayer.tech",
+      "documentation": "https://web3.okx.com/xlayer/docs/developer/build-on-xlayer/network-information"
+    }
+  },
+  {
     "id": "blast",
     "name": "Blast",
     "coinId": 100081457,
